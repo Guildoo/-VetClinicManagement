@@ -2,9 +2,9 @@ public class Animal {
     private String nome;
     private String especie;
     private int idade;
-    private Pessoa dono;
+    private Tutor dono;
 
-    public Animal(String nome, String especie, int idade, Pessoa dono) {
+    public Animal(String nome, String especie, int idade, Tutor dono) {
         this.nome = nome;
         this.especie = especie;
         this.idade = idade;
@@ -35,21 +35,20 @@ public class Animal {
         this.idade = idade;
     }
 
-    public Pessoa getDono() {
+    public Tutor getDono() {
         return dono;
     }
 
-    public void setDono(Pessoa dono) {
+    public void setDono(Tutor dono) {
         this.dono = dono;
     }
 
     @Override
     public String toString() {
-        return "Animal: " +
-                "nome='" + nome + '\'' +
-                ", especie='" + especie + '\'' +
+        return  "nome='" + nome + '\'' +
+                ", especie=" + especie + '\'' +
                 ", idade=" + idade +
-                ", dono=" + dono +
-                '}';
+                ", dono=" + dono.getNome() + " (" + dono.getCpf() + ")";
+
     }
 }
